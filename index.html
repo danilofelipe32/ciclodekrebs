@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krebs Cycle Animation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .bg-krebs-gradient {
+        background-color: #111827;
+        background-image: radial-gradient(at 8% 13%, hsla(222,50%,15%,1) 0px, transparent 50%), radial-gradient(at 94% 89%, hsla(258,50%,20%,1) 0px, transparent 50%);
+      }
+
+      @keyframes particle-in {
+        from {
+          transform: translate(calc(var(--start-x) - 50%), calc(var(--start-y) - 50%)) scale(0.5);
+          opacity: 0;
+        }
+        to {
+          transform: translate(calc(var(--end-x) - 50%), calc(var(--end-y) - 50%)) scale(1);
+          opacity: 1;
+        }
+      }
+
+      @keyframes particle-out {
+        from {
+          transform: translate(calc(var(--start-x) - 50%), calc(var(--start-y) - 50%)) scale(1);
+          opacity: 1;
+        }
+        to {
+          transform: translate(calc(var(--end-x) - 50%), calc(var(--end-y) - 50%)) scale(1.2);
+          opacity: 0;
+        }
+      }
+      
+      @keyframes pulse-glow {
+        0%, 100% {
+          box-shadow: 0 0 10px 2px rgba(56, 189, 248, 0.4), 0 0 20px 5px rgba(56, 189, 248, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 20px 5px rgba(56, 189, 248, 0.6), 0 0 40px 10px rgba(56, 189, 248, 0.4);
+        }
+      }
+
+      @keyframes flow {
+        from {
+          stroke-dashoffset: 0;
+        }
+        to {
+          stroke-dashoffset: -20;
+        }
+      }
+
+      .animate-flow {
+        animation: flow 1s linear infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body class="bg-krebs-gradient">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

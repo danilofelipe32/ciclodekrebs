@@ -1,0 +1,5 @@
+{
+  "name": "Krebs Cycle Animation",
+  "description": "An interactive and animated visualization of the Krebs (Citric Acid) Cycle, detailing each of the 8 steps, its reactants, and products. The application provides controls to play, pause, and step through the biochemical process.",
+  "requestFramePermissions": []
+}
