@@ -24,14 +24,14 @@ const InfoCard: React.FC<{ title: string; items: string[]; className?: string }>
 const StepInfo: React.FC<StepInfoProps> = ({ stepData }) => {
   if (!stepData) {
     return (
-      <div className="w-full lg:w-1/4 h-full p-6 bg-indigo-950/40 backdrop-blur-sm rounded-2xl border border-indigo-700/50 flex items-center justify-center">
+      <div className="w-full flex-grow p-6 bg-indigo-950/40 backdrop-blur-sm rounded-2xl border border-indigo-700/50 flex items-center justify-center">
         <p className="text-slate-400 text-center">Selecione um passo ou inicie a animação para ver os detalhes.</p>
       </div>
     );
   }
 
   return (
-    <div className="w-full lg:w-1/4 h-full p-6 bg-indigo-950/70 backdrop-blur-sm rounded-2xl border border-indigo-700/50 shadow-2xl shadow-sky-500/20 flex flex-col transition-all duration-500">
+    <div className="w-full flex-grow min-h-0 p-6 bg-indigo-950/70 backdrop-blur-sm rounded-2xl border border-indigo-700/50 shadow-2xl shadow-sky-500/20 flex flex-col transition-all duration-500 overflow-y-auto">
       <h3 className="text-2xl font-bold text-sky-300 mb-1">
         Passo {stepData.step}: {stepData.name}
       </h3>

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { KREBS_CYCLE_DATA } from '../constants';
 import type { KrebsCycleStep } from '../types';
@@ -290,7 +289,7 @@ const KrebsCycle: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row gap-8 items-center">
+    <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-stretch">
       <div className="w-full lg:w-3/4 relative aspect-square max-w-2xl mx-auto">
         <div className="absolute inset-0 bg-indigo-900/10 rounded-full border-2 border-indigo-800/40"></div>
         <div className="absolute inset-[10%] bg-indigo-900/20 rounded-full border-2 border-indigo-900/80"></div>
